@@ -261,8 +261,6 @@ export default {
   },
 };
 </script>
-
-
 <style>
 .v-card--reveal {
   align-items: center;
@@ -291,8 +289,6 @@ export default {
 .ContactInfo {
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
 }
 .contactInfoNested {
   display: flex;

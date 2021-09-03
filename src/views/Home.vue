@@ -98,7 +98,7 @@
                 For the perfect meal
               </div>
               <h3 class="text-h4 font-weight-light green--text mb-2">
-                Vue Js Mobile Application
+                Vue Js Application
               </h3>
               <div class="font-weight-light text-h6 mb-2">
                 Our Vintage kitchen utensils delight any chef.<br />
@@ -216,6 +216,7 @@
             </div>
           </v-col>
         </v-row>
+        <v-btn elevation="2" v-on:click="emitMethod()">buss Event</v-btn>
       </v-toolbar>
     </template>
   </div>
@@ -228,6 +229,7 @@ import Mobile from "../assets/Mobile.png";
 import CleanGreen from "../assets/CleanGreen.png";
 import kalsoft from "../assets/kalsoft.png";
 import urban from "../assets/urban.png";
+import EventBus from "./Event-bus.js";
 
 export default {
   data() {
@@ -258,6 +260,12 @@ export default {
       ],
       isLandscape: false,
     };
+  },
+  methods: {
+    emitMethod() {
+      EventBus.$emit("EVENT", "payLoad");
+      this.$router.push("/Add");
+    },
   },
 };
 </script>
